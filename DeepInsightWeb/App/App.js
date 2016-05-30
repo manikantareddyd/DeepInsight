@@ -6,6 +6,11 @@ var app = (function () {
 
     // Common initialization function (to be called from each page)
     app.initialize = function () {
+        $.ajaxSetup({
+            beforeSend: function (request) {
+                request.setRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko");
+            }
+        });
         $('#action-box').hide();
         
         $('#action-box-close').click(function () {
@@ -16,7 +21,7 @@ var app = (function () {
 
         // After initialization, expose a common notification function
         app.showActionBox = function ( text) {
-
+            console.log($.browser)
             $('#action-box').slideDown('fast');
             var topicsList = app.getTopics(text);
 
@@ -39,6 +44,7 @@ var app = (function () {
         };
 
         app.genTopicsDictHTML = function (topicsList) {
+            
             return;
         };
 
@@ -89,60 +95,10 @@ var app = (function () {
         }
 
         app.genArticles = function (topicsList) {
-            //$("#articles").html('<iframe src="https://scholar.google.co.in/scholar?hl=en&q=Hello" />');
-            //$.ajax({
-            //    "url": "https://scholar.google.co.in/scholar?hl=en&q=Hello",
-            //    headers: {
-            //        'Access-Control-Allow-Origin': '*',
-            //        'Origin':"google.co.in"
-            //    },
-            //    dataType: 'text/html',
-            //    error: function (xhr, ajaxOptions, thrownError) {
-            //        console.log("Boom");
-            //        console.log(thrownError);
-            //    },
-            //    success: function (data) {
-            //        console.log(data);
-
-            //    }
-            //});
-
-            var invocation = new XMLHttpRequest();
-            var url = 'https://scholar.google.co.in/scholar?hl=en&q=Hello';
-
-            function callOtherDomain() {
-                if (invocation) {
-                    invocation.open('GET', url, true);
-                    invocation.onreadystatechange = function (data) { console.log("Huuuu"+data)};
-                    invocation.send();
-                }
-            }
-
-
-            //});
-            //$("#articles").html('<object type="text/html" data="https://scholar.google.co.in/scholar?hl=en&q=Hello" style="width:100%; height:100%"/>');
-            //$("#articles").load('https://scholar.google.co.in/scholar?hl=en&q=Hello');
-            //var site = 'https://scholar.google.co.in/scholar?hl=en&q=Hello';
-            //var yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from html where url="' + site + '"') + '&format=xml&callback=cbFunc';
-            //console.log("Haha "+yql);
-            //$.getJSON( yql, function(data){
-            //    console.log("Humm "+data);
-            //});
-            //$.ajax({
-            //    type: "GET",
-            //    "url": 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from html where url="' +
-            //        'https://scholar.google.co.in/scholar?hl=en&q=Hello' +
-            //        '"') + '&format=json',
-            //    dataType: "jsonp",
-            //    error: function (xhr, ajaxOptions, thrownError) {
-            //        console.log("Boom2"+thrownError);
-                    
-            //    },
-            //    success: function (data) {
-            //        console.log(data);
-            //    },
-            //});
-
+            //Backend Query
+            $('#articles').html('<iframe src="https://www.bing.com/search?form=MSTLP1&q=Intelligent"></iframe>');
+            
+            Word.
             return;
         }
     };
