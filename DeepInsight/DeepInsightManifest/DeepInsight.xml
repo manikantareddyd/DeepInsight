@@ -11,6 +11,8 @@
     <AppDomain>https://scholar.google.co.in</AppDomain>
     <AppDomain>https://en.wikipedia.org</AppDomain>
     <AppDomain>https://localhost:44300</AppDomain>
+    <AppDomain>https://api.textrazor.com</AppDomain>
+    <AppDomain>http://api.textrazor.com</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document" />

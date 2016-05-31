@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title></title>
     <script src="../../Scripts/jquery-1.9.1.js" type="text/javascript"></script>
-
     <link href="../../Content/Office.css" rel="stylesheet" type="text/css" />
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
-
     <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
     <!-- <script src="../../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
     <!-- <script src="../../Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+    <script src="../DataControllers/WikiPediaDataController.js"></script>
+    <script src="../DataServices/TopicsExtractor.js"></script>
     <link href="../App.css" rel="stylesheet" type="text/css" />
-    <link href="../misc/customFonts.css" rel="stylesheet" />
+    <link href="../../Content/customFonts.css" rel="stylesheet" />
     <script src="../App.js" type="text/javascript"></script>
     <script src="../../Scripts/jquery-2.2.3.js"></script>
     <link href="../../Content/bootstrap.css" rel="stylesheet" />
     <script src="../../Scripts/bootstrap.js"></script>
     <link href="Home.css" rel="stylesheet" type="text/css" />
     <script src="Home.js" type="text/javascript"></script>
+    <!--[if lte IE 9]>
+     <script src="../../Scripts/jquery.xdomainrequest.min.js"></script>
+    <![endif]-->
+
 </head>
 <body class="muli">
     <div class="josefin" id="content-header">
@@ -36,15 +40,11 @@
     </div>
     <div id="action-box" class="muli">
         <div class="padding">
-
             <ul class="list-inline">
                 <li class="active"><a data-toggle="tab" href="#topics">Topics</a></li>
                 <li><a data-toggle="tab" href="#images">Images</a></li>
                 <li><a data-toggle="tab" href="#wikipedia">WikiPedia</a></li>
-                <li><a data-toggle="tab" href="#articles">Articles</a>
-                    
-                </li>
-                
+                <li><a data-toggle="tab" href="#articles">Articles</a></li>
             </ul>
             <div class="tab-content">
                 <div id="topics" class="tab-pane fade in active">

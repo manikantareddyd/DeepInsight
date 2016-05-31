@@ -16,6 +16,7 @@
     // Reads data from current document selection and displays a notification
     function getDataFromSelection() {
         $('#get-data-from-selection-head').slideDown('fast');
+
         Office.context.document.getSelectedDataAsync(Office.CoercionType.Text,
             function (result) {
                 if (result.status === Office.AsyncResultStatus.Succeeded) {

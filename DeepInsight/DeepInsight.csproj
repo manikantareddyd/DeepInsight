@@ -22,6 +22,7 @@
     <ProjectMode>OfficeApp</ProjectMode>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
+    <ActivePublishProfile>OfficeAppK - Web Deploy</ActivePublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="DeepInsightManifest\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{08552439-9317-4777-9c54-35cbb4d4364f}</SharePointProjectItemId>
     </None>
