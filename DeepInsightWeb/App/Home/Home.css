@@ -1,2 +1,6 @@
 ﻿/* Page-specific styling */
 
+#canvas .circle {
+    display: inline-block;
+    margin: 5em;
+}

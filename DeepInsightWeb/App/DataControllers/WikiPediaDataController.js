@@ -1,29 +1,44 @@
-﻿genWikipedia = function (topicsList, topicsWikiLink) {
+﻿genWikipediaPage = function (topicsList, topicsWikiName) {
     var count;
     for (count = 0; count < topicsList.length; count++) {
         $.ajax({
             type: "GET",
-            "url": topicsWikiLink[count],
+            "url": "https://en.wikipedia.org/w/api.php?format=json&indexpageids=true&action=query&prop=extracts&exintro=&explaintext=&titles=" + topicsWikiName[count],
             dataType: "jsonp",
             error: function (xhr, ajaxOptions, thrownError) {
-
-                console.log("Boom");
+                console.log("Boom in WikiPedia");
             },
             success: function (data) {
                 var items = [];
-                console.log("Oops");
                 var pagesId = Object.keys(data.query.pages);
-
+                var extract;
+                var boo;
+                var poo;
+                console.log(data);
                 $.each(pagesId, function (key, val) {
-                    var extract = data.query.pages[val].extract
-                    var boo = extract.split('');
-                    boo.splice(300, extract.length);
-                    extract = boo.join('');
-                    items.push(
-                        '<li class="well">' +
-                            '<h4>' + data.query.pages[val].title + '</h4>' +
-                            '<p>' + extract + ' ...</p>' +
-                        '</li>');
+                    extract = data.query.pages[val].extract;
+                    if (extract != null) {
+                        //console.log(extract);
+                        boo = extract.split('');
+                        boo.splice(300, extract.length);
+                        extract = boo.join('');
+                        if (extract != "" && data.query.pages[val].title != "Undefined") {
+                            try{
+                                poo = data.query.normalized[0]["from"];
+                            }
+                            catch(err){
+                                poo = data.query.pages[val].title;
+                            }
+                                
+                            items.push(
+                            '<li class="well">' +
+                                '<a target="_blank" href="https://en.wikipedia.org/wiki/'+poo+'"><h4>' + data.query.pages[val].title + '</h4></a>' +
+                                '<p>' + extract + ' ...</p>' +
+                            '</li>');
+                        }
+                        
+                    }
+                    
                 });
                 $('<ul>', {
                     html: items.join('')

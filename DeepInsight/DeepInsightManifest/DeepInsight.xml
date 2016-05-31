@@ -3,10 +3,12 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
   <Id>2aebb226-6edf-4279-9baf-ca8a65b33c4a</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>[Provider name]</ProviderName>
+  <ProviderName>Manikanta Reddy D</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="DeepInsight" />
   <Description DefaultValue="DeepInsight"/>
+  <IconUrl DefaultValue="~remoteAppUrl/Images/32x32.png" />
+  <HighResolutionIconUrl DefaultValue="~remoteAppUrl/Images/64x64.png" />
   <AppDomains>
     <AppDomain>https://scholar.google.co.in</AppDomain>
     <AppDomain>https://en.wikipedia.org</AppDomain>
