@@ -17,7 +17,7 @@
             console.log("Boom",thrownError);
         },
         "success": function (data) {
-            console.log(data);
+            //console.log(data);
             var coarseTopics = data.response.coarseTopics;
             var topics = data.response.topics;
             var topicsList = [];
@@ -63,7 +63,6 @@ populateSentiment = function (text) {
 
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-            
             genSentiment(JSON.parse(this.response)["documents"][0]["score"])
             console.log(this.response);
         }
@@ -83,8 +82,10 @@ runAllJobs = function (topicsList, topicsWikiNamesList) {
 
     $('#images').html('<div class="circle" id="circles-1"></div>');
 
-    //genImagesPage(topicsList);
 
     $('#articles').html('');
     //genArticlesPage(topicsList);
+
+    $('#topics-list').html('<h3 class="josefin">Identifying the context of discussion...</h3>');
+    genTopicsListCard(topicsList);
 }

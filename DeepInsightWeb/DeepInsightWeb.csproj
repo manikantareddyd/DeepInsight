@@ -101,6 +101,7 @@
     <Content Include="App\App.css" />
     <Content Include="App\App.js" />
     <Content Include="App\DataControllers\SentimentDataController.js" />
+    <Content Include="App\DataControllers\TopicsListCardController.js" />
     <Content Include="App\DataControllers\WikiPediaDataController.js" />
     <Content Include="App\AppController.js" />
     <Content Include="App\Home\Home.css" />
@@ -115,6 +116,7 @@
     <Content Include="Content\OfficeThemes.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\32x32.png" />
+    <Content Include="Images\400.jpg" />
     <Content Include="Images\64.png" />
     <Content Include="Images\64x64.png" />
     <Content Include="Images\Capture.PNG" />
@@ -133,6 +135,7 @@
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\circular-progress.js" />
     <Content Include="Scripts\jquery-2.2.3.js" />
     <Content Include="Scripts\jquery-2.2.3.min.js" />
     <Content Include="Scripts\jquery-2.2.3.min.map" />

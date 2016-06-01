@@ -21,7 +21,9 @@ var app = (function () {
 
             // Call everything... The Name is Misleading but befitting.
             populatePage(text);
-            populateSentiment(text);
+            //populateSentiment(text);
+            genSentiment(0.35);
+
         };
     };
     return app;

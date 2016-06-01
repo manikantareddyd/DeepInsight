@@ -14,7 +14,7 @@
                 var extract;
                 var boo;
                 var poo;
-                console.log(data);
+                //console.log(data);
                 $.each(pagesId, function (key, val) {
                     extract = data.query.pages[val].extract;
                     if (extract != null) {
@@ -43,13 +43,13 @@
                 $('<ul>', {
                     html: items.join('')
                 }, '</ul>').appendTo('#wikipedia');
-                console.log(pagesId);
+                //console.log(pagesId);
             },
         });
 
     }
 
     //deferred.then(console.log('LOL ' + temphtml));
-    console.log('LOL ');
+    console.log('Retrieved from WikiPedia');
     return;
 }

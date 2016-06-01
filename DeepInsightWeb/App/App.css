@@ -1,7 +1,5 @@
 ﻿/* Common app styling */
-* {
-  border-radius: 0 !important;
-}
+
 #content-header {
     background: #2a8dd4;
     color: #fff;
@@ -23,7 +21,7 @@
     overflow: auto; /* Enable scrollbars within main content section */
 }
 
-.padding {
+.custom-padding {
     padding: 15px;
 }
 
