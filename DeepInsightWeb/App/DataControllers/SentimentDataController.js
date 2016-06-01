@@ -22,15 +22,13 @@
 
     }
     var str = '<div class="josefin">' +
-                    '<h2>Sentiment</h1><h4>I have a feeling that your document is</h4>' +
+                    '<h1><b>The Sentiment</b></h1><h4>I feel that your document is</h4>' +
                     '<h2>' +
                         percentage.toString() + '\% positive' +
                     '</h2><br>' +
-                    
-                    
-                    '<p> Master Yoda: '+
+                    '<h4> Master Yoda: '+
                         fodder +
-                    '</p>'
+                    '</h4>'
                '</div>';
 
     $('#sentiment').html(str);

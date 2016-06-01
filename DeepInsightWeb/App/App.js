@@ -18,9 +18,9 @@ var app = (function () {
         // After initialization, expose a common notification function
         app.showActionBox = function ( text) {
             $('#action-box').slideDown('fast');
-
+            genImages();
             // Call everything... The Name is Misleading but befitting.
-            populatePage(text);
+            //populatePage(text);
             //populateSentiment(text);
             genSentiment(0.35);
 

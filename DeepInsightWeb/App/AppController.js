@@ -77,13 +77,16 @@ populateSentiment = function (text) {
 
 runAllJobs = function (topicsList, topicsWikiNamesList) {
 
-    $('#wikipedia').html('');
+    $('#wikipedia').html('<h1 class="josefin"><b>Wikipedia Excerpts</b></h1><p>Here you\'ll find excerpts from wikipedia on topics that relate to your text</p>');
     genWikipediaPage(topicsList, topicsWikiNamesList);
 
-    $('#images').html('<div class="circle" id="circles-1"></div>');
-
+    $('#images').html('');
+    genImages();
 
     $('#articles').html('');
+
+    $('#news').html('');
+    genNews();
     //genArticlesPage(topicsList);
 
     $('#topics-list').html('<h3 class="josefin">Identifying the context of discussion...</h3>');

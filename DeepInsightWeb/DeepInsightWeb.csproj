@@ -88,6 +88,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\DataControllers\ImagesFeedController.js" />
+    <Content Include="App\DataControllers\NewsFeedController.js" />
+    <Content Include="fonts\Muli-Light.ttf" />
     <None Include="Properties\PublishProfiles\OfficeAppK - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OfficeAppK - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
