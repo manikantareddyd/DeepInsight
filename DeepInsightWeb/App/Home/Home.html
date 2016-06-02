@@ -14,6 +14,7 @@
     <script src="../DataControllers/TopicsListCardController.js"></script>
     <script src="../DataControllers/WikiPediaDataController.js"></script>
     <script src="../DataControllers/NewsFeedController.js"></script>
+    <script src="../DataControllers/DeepDiveController.js"></script>
     <script src="../DataControllers/ImagesFeedController.js"></script>
     <script src="../AppController.js"></script>
     <link href="../App.css" rel="stylesheet" type="text/css" />
@@ -28,10 +29,16 @@
 </head>
 <body class="muli">
     
-    <div class="josefin" id="content-header">
-        <div style="position:absolute; padding-left:30px; text-align:left">
-            <h1>DeepInsight</h1>
-            <button id="get-data-from-selection-head" style="height:30px" class="btn-default">Go</button>
+    <div class="josefin" id="content-header" style="position:absolute; padding-left:30px; text-align:left">
+        <div class="row">
+            <div class="col-xs-6">
+                <img class="img-responsive" src="../../Images/64x64.png" />
+            </div>
+            <div class="col-xs-6" >
+                <h1>DeepInsight</h1>
+                <button id="get-data-from-selection-head" style="height:30px" class="btn-default">Go</button>
+            </div>
+            
         </div>
     </div>
 
@@ -43,16 +50,31 @@
     </div>
     
     <div id="action-box" class="muli">
-        <div class="custom-padding">
-            <ul class="list-inline">
-                <li class="active"><a data-toggle="tab" href="#overview">Overview</a></li>
-                <li><a data-toggle="tab" href="#images">Images</a></li>
-                <li><a data-toggle="tab" href="#wikipedia">WikiPedia</a></li>
-                <li><a data-toggle="tab" href="#articles">Articles</a></li>
-                <li><a data-toggle="tab" href="#news">News</a></li>
-            </ul>
-
-            <div class="tab-content">
+        <div>
+            <div class="accordion-group accordion-caret" style="padding-top:0px">
+                <div class="accordion-heading" style="text-align:center;padding-top:0px">
+                    <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">
+                        
+                    </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                        <div class="row custom-padding" style="word-wrap:break-word; text-align:center;">
+                            <div class="active col-xs-4"><a class="custom-li" data-toggle="tab" href="#overview">Overview</a></div>
+                            <div class="col-xs-4"><a class="custom-li" data-toggle="tab" href="#web">Web</a></div>
+                            <div class="col-xs-4"><a class="custom-li" data-toggle="tab" href="#images">Images</a></div>
+                            <div class="col-xs-4"><a class="custom-li" data-toggle="tab" href="#videos">Videos</a></div>
+                            <div class="col-xs-4"><a class="custom-li" data-toggle="tab" href="#wikipedia">WikiPedia</a></div>
+                            <div class="col-xs-4"><a class="custom-li" data-toggle="tab" href="#articles">Articles</a></div>
+                            <div class="col-xs-4"><a class="custom-li" data-toggle="tab" href="#news">News</a></div>
+                            <div class="col-xs-4"><a class="custom-li" data-toggle="tab" href="#deeper">Deep Dive</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr />
+            <div class="tab-content custom-padding">
                 <div id="overview" class="tab-pane fade in active">
                     <div id="sentiment" class="well josefin custom-overview">
                         <h3>Estimating the Sentiment...</h3>
@@ -60,11 +82,14 @@
                     <div id="topics-list" class="well josefin custom-overview">
                         <h3>Identifying the context of discussion...</h3>
                     </div>
-                    
-                    
                 </div>  
                 <div id="images" class="tab-pane fade">
 
+                </div>
+                <div id="videos" class="tab-pane fade">
+                    <div class="well josefin custom-overview">
+                        <h2>Video support coming soon...</h2>
+                    </div>
                 </div>
                 <div id="wikipedia" class="tab-pane fade">
                     
@@ -75,7 +100,27 @@
                 <div id="news" class="tab-pane fade">
 
                 </div>
+                <div id="deeper" class="tab-pane fade" >
+                    <ul class="list-inline" style="text-align:center">
+                        <li class="active"><a data-toggle="tab" href="#deeper_entity">Entities</a></li>
+                        <li><a data-toggle="tab" href="#deeper_concepts">Concepts</a></li>
+                        <li><a data-toggle="tab" href="#deeper_otopics">Other Topics</a></li>
+                        <li><a data-toggle="tab" href="#deeper_classification">Classification</a></li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <hr />
+                        <div id="deeper_entity" class="tab-pane fade in active"></div>
+                        <div id="deeper_concepts" class="tab-pane fade in active"></div>
+                        <div id="deeper_otopics" class="tab-pane fade in active"></div>
+                        <div id="deeper_classification" class="tab-pane fade in active"></div>
+                        
+                    </div>
+                </div>
+                
             </div>
+            
+
             <div id="action-box-close"><span class="glyphicon glyphicon-remove"></span></div>
         </div>
     </div>

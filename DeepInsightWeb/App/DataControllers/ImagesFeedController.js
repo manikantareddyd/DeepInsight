@@ -4,28 +4,32 @@ var data = '{ "_type": "Images", "instrumentation": { "pageLoadPingUrl": "https:
 
 var dataObj = JSON.parse(data);
 
-console.log(dataObj);
-var count, imgurl, name, desc,t;
-var html = '<h1 class="josefin"><b>Related Images</b></h1><p>Here you\'ll find rich images to integrate with your text</p><div class="well">';
-
-for (count = 0; count < dataObj.value.length; count++) {
-    try {
-        if (count % 3 == 0) {
-            html = html + '<div class=row>';
-            for(t=0;t<3;t++){
-                imgurl = dataObj.value[count+t].thumbnailUrl;
-                url = dataObj.value[count+t].webSearchUrl;
-                html = html + 
-                    '<div class="col-xs-4" style="margin:0;padding:0" ><a target="_blank" href="' + url + '"><img   class="img-responsive" src="' + imgurl + '"/></div>'
-            }
-            html = html + '</div>';    
-        }
-        
-    }
-    catch (err) {
-        ;
-    }
+genImagesHtml(dataObj);
 }
-html=html+'</div>'
-$('#images').html(html);
+
+var genImagesHtml = function (dataObj) {
+    //console.log(dataObj);
+    var count, imgurl, name, desc, t;
+    var html = '<h1 class="josefin"><b>Related Images</b></h1><p>I think that these images will well integrate with your text</p><div class="well">';
+
+    for (count = 0; count < dataObj.value.length; count++) {
+        try {
+            if (count % 2 == 0) {
+                html = html + '<div class=row>';
+                for (t = 0; t < 2; t++) {
+                    imgurl = dataObj.value[count + t].thumbnailUrl;
+                    url = dataObj.value[count + t].webSearchUrl;
+                    html = html +
+                        '<div class="col-xs-6" style="margin:0;padding:0" ><a target="_blank" href="' + url + '"><img   class="img-responsive" src="' + imgurl + '"/></div>'
+                }
+                html = html + '</div>';
+            }
+        }
+        catch (err) {
+            ;
+        }
+    }
+    html = html + '</div>'
+    $('#images').html(html);
+
 }

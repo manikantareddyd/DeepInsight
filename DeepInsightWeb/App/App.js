@@ -23,6 +23,8 @@ var app = (function () {
             //populatePage(text);
             //populateSentiment(text);
             genSentiment(0.35);
+            genDeepDive();
+            genNews();
 
         };
     };

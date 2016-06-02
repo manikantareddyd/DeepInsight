@@ -4,3 +4,48 @@
     border-radius:0;
     text-align:center;
 }
+.nav-pills>li+li {
+  
+  margin:0;
+}
+.nav-pills li{
+    padding:0;
+    margin:0;
+} 
+/*.nav-pills a{
+    margin:0;
+    padding:0;
+}*/
+
+.btn-circle {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  border-radius: 40px;
+}
+
+ .accordion-caret .accordion-toggle:hover {
+        text-decoration: none;
+    }
+    .accordion-caret .accordion-toggle:before {
+        font-size: 30px;   
+    }
+    .accordion-caret .accordion-toggle:not(.collapsed):before {
+        content: "▾ Collapse";
+
+    }
+    .accordion-caret .accordion-toggle.collapsed:before {
+        content: "▸ Menu";
+    }
+.custom-li {
+    text-align:center;
+    margin:0px;
+    padding:2px;
+}
+.custom-li:visited{
+    background-color:#2a8dd4;
+}
+.col-xs-4:hover{
+    background-color:#2a8dd4;
+    text-decoration-color:#fff;
+}
