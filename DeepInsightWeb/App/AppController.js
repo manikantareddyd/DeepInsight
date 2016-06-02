@@ -47,34 +47,6 @@
     return;
 }
 
-populateSentiment = function (text) {
-    var data = JSON.stringify({
-        "documents": [
-          {
-              "language": "en",
-              "id": "string",
-              "text": text
-          }
-        ]
-    });
-
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-
-    xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4) {
-            genSentiment(JSON.parse(this.response)["documents"][0]["score"])
-            console.log(this.response);
-        }
-    });
-
-    xhr.open("POST", "https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment");
-    xhr.setRequestHeader("ocp-apim-subscription-key", "62e3adb14665494986b47b8b69449432");
-    xhr.setRequestHeader("content-type", "application/json");
-    xhr.send(data);
-}
-
-
 runAllJobs = function (topicsList, topicsWikiNamesList) {
 
     $('#wikipedia').html('<h1 class="josefin"><b>Wikipedia Excerpts</b></h1><p>Here you\'ll find excerpts from wikipedia on topics that relate to your text</p>');
@@ -91,4 +63,5 @@ runAllJobs = function (topicsList, topicsWikiNamesList) {
 
     $('#topics-list').html('<h3 class="josefin">Identifying the context of discussion...</h3>');
     genTopicsListCard(topicsList);
+    
 }

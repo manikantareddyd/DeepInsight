@@ -20,12 +20,11 @@ var app = (function () {
             $('#action-box').slideDown('fast');
             genImages();
             // Call everything... The Name is Misleading but befitting.
-            //populatePage(text);
-            //populateSentiment(text);
-            genSentiment(0.35);
+            populatePage(text);
+            genSentiment();
             genDeepDive();
             genNews();
-
+            
         };
     };
     return app;

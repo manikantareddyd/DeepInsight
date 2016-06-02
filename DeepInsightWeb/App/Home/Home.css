@@ -1,9 +1,10 @@
 ﻿/* Page-specific styling */
-.custom-overview{
+.custom-overview-card{
     padding:15px; 
     border-radius:0;
     text-align:center;
 }
+
 .nav-pills>li+li {
   
   margin:0;
@@ -28,7 +29,7 @@
         text-decoration: none;
     }
     .accordion-caret .accordion-toggle:before {
-        font-size: 30px;   
+        font-size: 15px;   
     }
     .accordion-caret .accordion-toggle:not(.collapsed):before {
         content: "▾ Collapse";
@@ -37,15 +38,3 @@
     .accordion-caret .accordion-toggle.collapsed:before {
         content: "▸ Menu";
     }
-.custom-li {
-    text-align:center;
-    margin:0px;
-    padding:2px;
-}
-.custom-li:visited{
-    background-color:#2a8dd4;
-}
-.col-xs-4:hover{
-    background-color:#2a8dd4;
-    text-decoration-color:#fff;
-}

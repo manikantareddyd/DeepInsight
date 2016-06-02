@@ -92,9 +92,14 @@
     <Content Include="App\DataControllers\ImagesFeedController.js" />
     <Content Include="App\DataControllers\NewsFeedController.js" />
     <Content Include="App\DataControllers\VideosFeedController.js" />
+    <Content Include="App\DataControllers\WeatherController.js" />
     <Content Include="fonts\Muli-Light.ttf" />
     <None Include="Properties\PublishProfiles\OfficeAppK - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OfficeAppK - Web Deploy.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,6 +131,7 @@
     <Content Include="Images\64x64.png" />
     <Content Include="Images\Capture.PNG" />
     <Content Include="Images\Close.png" />
+    <Content Include="Images\logo.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -381,8 +387,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
