@@ -25,6 +25,7 @@ var app = (function () {
             genSentiment();
             genDeepDive();
             genNews();
+            genWeb();
             
         };
     };
