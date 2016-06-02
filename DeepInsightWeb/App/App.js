@@ -19,6 +19,7 @@ var app = (function () {
         app.showActionBox = function ( text) {
             $('#action-box').slideDown('fast');
             genImages();
+            getLocation();
             // Call everything... The Name is Misleading but befitting.
             populatePage(text);
             genSentiment();
