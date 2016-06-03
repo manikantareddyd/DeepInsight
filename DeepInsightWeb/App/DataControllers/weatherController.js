@@ -6,7 +6,7 @@
 
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-            //console.log(JSON.parse(this.response));
+            console.log(JSON.parse(this.response));
             genWeatherHtml(JSON.parse(this.response));
         }
     });
@@ -33,7 +33,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    //console.log(position,"oooo");
+    console.log(position,"oooo");
     genWeather(position);
 }
 

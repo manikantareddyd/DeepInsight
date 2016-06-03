@@ -18,14 +18,15 @@ var app = (function () {
         // After initialization, expose a common notification function
         app.showActionBox = function ( text) {
             $('#action-box').slideDown('fast');
-            genImages();
+            //genImages();
             getLocation();
-            // Call everything... The Name is Misleading but befitting.
+           //  Call everything... The Name is Misleading but befitting.
             populatePage(text);
-            genSentiment();
-            genDeepDive();
-            genNews();
-            genWeb();
+            genSentiment(text);
+            genDeepDive(text);
+            //genNews();
+            //genWeb();
+            //genTwitter();
             
         };
     };

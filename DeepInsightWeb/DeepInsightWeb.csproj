@@ -91,6 +91,7 @@
     <Content Include="App\DataControllers\DeepDiveController.js" />
     <Content Include="App\DataControllers\ImagesFeedController.js" />
     <Content Include="App\DataControllers\NewsFeedController.js" />
+    <Content Include="App\DataControllers\TwitterFeedController.js" />
     <Content Include="App\DataControllers\VideosFeedController.js" />
     <Content Include="App\DataControllers\WeatherController.js" />
     <Content Include="App\DataControllers\WebFeedController.js" />

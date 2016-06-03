@@ -53,13 +53,19 @@ runAllJobs = function (topicsList, topicsWikiNamesList) {
     genWikipediaPage(topicsList, topicsWikiNamesList);
 
     $('#images').html('');
-    genImages();
+    genImages(topicsList);
 
-    $('#articles').html('');
+    //$('#articles').html('');
 
     $('#news').html('');
-    genNews();
-    //genArticlesPage(topicsList);
+    genNews(topicsList);
+    ////genArticlesPage(topicsList);
+
+    $('#twitter').html('');
+    genTwitter(topicsList);
+
+    $('#web').html('');
+    genWeb(topicsList);
 
     $('#topics-list').html('<h3 class="josefin">Identifying the context of discussion...</h3>');
     genTopicsListCard(topicsList);
