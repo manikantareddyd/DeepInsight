@@ -22,8 +22,9 @@ var app = (function () {
             getLocation();
            //  Call everything... The Name is Misleading but befitting.
             populatePage(text);
-            genSentiment(text);
             genDeepDive(text);
+            
+            genSentiment(text);
             //genNews();
             //genWeb();
             //genTwitter();

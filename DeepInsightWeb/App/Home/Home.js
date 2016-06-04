@@ -1,4 +1,6 @@
-﻿/// <reference path="../App.js" />
+﻿//This part binds the data with office and then send the text to the 'app'. 
+//Look at getDataFromSelection... Its has a asynchronous method whose output callbacks a method SendDataToApp
+
 
 (function () {
     "use strict";
@@ -17,14 +19,13 @@
     function getDataFromSelection() {
         $('#get-data-from-selection-head').slideDown('fast');
 
-        Office.context.document.getSelectedDataAsync(Office.CoercionType.Text,
-            function (result) {
-                if (result.status === Office.AsyncResultStatus.Succeeded) {
-                    app.showActionBox( result.value);
-                } else {
-                    app.showActionBox('Error:', result.error.message);
-                }
+        Office.context.document.getSelectedDataAsync(Office.CoercionType.Text, function (result) {
+            if (result.status === Office.AsyncResultStatus.Succeeded) {
+                app.showActionBox(result.value);
+            } else {
+                app.showActionBox('Error:', result.error.message);
             }
-        );
+        });
     }
 })();
+ 

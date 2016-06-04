@@ -1,7 +1,7 @@
 ﻿var genTwitter = function (topicsList) {
-    topicsList = topicsList.splice(0, 5);
+    topicsList = topicsList.splice(0, 2);
     var text = topicsList.join(" OR ");
-    console.log("OK0");
+    console.log("OK0",topicsList);
     var data = JSON.stringify(false);
     //var text = "India OR Culture OR Asia OR Politics OR South Asia";
     text = text.replace("-", " OR ");
@@ -51,7 +51,7 @@
 var genTwitterHtml = function (dataObj) {
     console.log("hehe", dataObj);
     var count, statuses, status, source;
-    html = "";
+    var html = '<h1 class="josefin"><b>Twitter feed</b></h1><p>These tweets have been trending recently relating your text!</p>';
     statuses = dataObj.statuses;
     for (count = 0; count < statuses.length; count++) {
         try{
