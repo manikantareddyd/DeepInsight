@@ -5,7 +5,7 @@
         "url": "https://api.textrazor.com",
         "method": "POST",
         "headers": {
-            "x-textrazor-key": "46886abb9cf9c25cd94f5df28d8e8bdd796338ce1a20d08ddda68939",
+            "x-textrazor-key": "b043156ea6a956b7b7cee9c9fdbead629578a609caace754ad13f958",
             "accept-encoding": "application/gzip",
             "content-type": "application/x-www-form-urlencoded"
         },

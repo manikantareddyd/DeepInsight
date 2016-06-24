@@ -55,10 +55,17 @@ var genTwitterHtml = function (dataObj) {
     statuses = dataObj.statuses;
     for (count = 0; count < statuses.length; count++) {
         try{
-            source = statuses[count].source;
+            var idstr = statuses[count].id_str;
         }
         catch (err) {
-            source = "";
+            console.log("oopssss", err);
+        }
+        try{
+            var usr = statuses[count].us
+        
+        }
+        catch (err) {
+            console.log("pp", err);
         }
         try {
             text = statuses[count].text;
@@ -68,10 +75,12 @@ var genTwitterHtml = function (dataObj) {
         catch (err) {
             text=""
         }
+
+       var turl = "https://twitter.com/" + usr + "/status/" + idstr;
         html = html+
-            '<div class="well">'+
-            '<p>'+source+'</p>'+
-            '<p>'+text+'</p>'+
+            '<div class="button well">' +
+            '<p>' + text + '</p>' +
+            '<a href="'+turl+'">Source</a>'+
             '</div>'
     }
     $('#twitter').html(html);
