@@ -36,5 +36,5 @@
 
     }
     .accordion-caret .accordion-toggle.collapsed:before {
-        content: "▸ Menu";
+        content: "▸ Expand";
     }
