@@ -1130,8 +1130,6 @@ def citation_export(querier):
         p =art.as_txt()
         q= art.as_citation()
         myList.append(dict(p.items()+q.items()))
-    print myList
-    print "\n============\n"
     print json.dumps(myList)
 
 def main():
