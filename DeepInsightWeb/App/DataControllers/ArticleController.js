@@ -14,18 +14,64 @@ var genArticlesHtml = function(dataObj) {
         html = html +
                 '<div class="well">';
         html = html + '<div id="article'+count+'">';
-            try {
+        try {
             
-                html = html + '<h4>' + dataObj[count].Title + '</h4>';
-            }
-            catch(err){;}
-            try{
-                html = html + '<p>' + dataObj[count].Excerpt + '</p>';
-            }
-            catch (err) {; }
+            html = html + '<h4>' + dataObj[count].Title + '</h4>';
+        }
+        catch(err){;}
+        try{
+            html = html + '<h5>' + dataObj[count].Citations + ' Citations</h5>';
+        }
+        catch(err){;}
+        try{
+            html = html + '<p>' + dataObj[count].Excerpt + '</p>';
+        }
+        catch (err) {; }
         html = html + '</div>';
         html = html + '<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#citation'+count+'">Toggle Citation Details</button>';
-        html = html + '<div class="collapse" id="citation' + count + '">'+count;
+        html = html + '<div class="collapse" id="citation' + count + '">';
+        html = html +
+            '<br><table class = "table">' +
+                    '<thead>' +
+                        '<tr>' +
+                            '<th>Field</th>' +
+                             '<th>Value</th>' +
+                         '</tr>' +
+                    '</thead>' +
+                    '<tbody>';
+        try{
+            html = html + '<tr>' + '<td>' + 'Title' + '</td>' + '<td>' + dataObj[count].Title + '</td></tr>';
+        }
+        catch (err) {; }
+        try {
+            html = html + '<tr>' + '<td>' + 'Type of Article' + '</td>' + '<td>' + dataObj[count]["Type of Article"] + '</td></tr>';
+        }
+        catch (err) {; }
+        try {
+            html = html + '<tr>' + '<td>' + 'Journal' + '</td>' + '<td>' + dataObj[count].Journal + '</td></tr>';
+        }
+        catch (err) {; }
+        try {
+            html = html + '<tr>' + '<td>' + 'Year' + '</td>' + '<td>' + dataObj[count].Year + '</td></tr>';
+        }
+        catch (err) {; }
+        try {
+            html = html + '<tr>' + '<td>' + 'Publisher' + '</td>' + '<td>' + dataObj[count].Publisher + '</td></tr>';
+        }
+        catch (err) {; }
+        try{
+            var cunt,poo='';
+            for(cunt=0;cunt<dataObj[count].Author.length;cunt++){
+                poo = poo + dataObj[count].Author[cunt] + '<br>'
+            }
+            html = html + '<tr>' + '<td>' + 'Authors' + '</td>' + '<td>' + poo + '</td></tr>';
+        }
+        catch (err) {; }
+
+        html = html +
+                    '</tbody>'+
+                '</table>'
+
         html = html + '</div>';
 
         html = html +

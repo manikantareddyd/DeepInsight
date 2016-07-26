@@ -51,7 +51,7 @@
 var genTwitterHtml = function (dataObj) {
     console.log("hehe", dataObj);
     var count, statuses, status, source;
-    var html = '<h1 class="josefin"><b>Twitter feed</b></h1><p>These tweets have been trending recently relating your text!</p>';
+    var html = '<h1 class="josefin"><b>Twitter feed</b></h1><p>These tweets have been trending recently and I think they might be useful to you!</p>';
     statuses = dataObj.statuses;
     for (count = 0; count < statuses.length; count++) {
         try{
@@ -83,6 +83,11 @@ var genTwitterHtml = function (dataObj) {
             '<a href="'+turl+'">Source</a>'+
             '</div>'
     }
+    if (statuses.length == 0) {
+        console.log("Twitter Empty");
+        html = '<div class="well"><h1 class="josefin"><b>:(</b></h1><p>I don\'t think anything relevant to your content is trending on Twitter. You are cooking up something really smart and new! aren\'t you?<p></div>';
+    }
+
     $('#twitter').html(html);
 }
 

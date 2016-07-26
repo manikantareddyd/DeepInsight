@@ -29,7 +29,7 @@
                     '<h1><b>The Sentiment</b></h1><h4>I feel that your document is</h4>' +
                     '<h2>' +
                         percentage.toString() + '\% positive' +
-                    '</h2><h4>' + feed+'</h4>'+'<p>'+fodder+'</p>'+
+                    '</h2><h4>' + feed+'</h4>'+'<h4><I>'+fodder+'</I></4>'+
                '</div>';
 
     $('#sentiment').html(str);
