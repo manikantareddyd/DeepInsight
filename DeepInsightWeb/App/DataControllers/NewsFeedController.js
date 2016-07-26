@@ -31,28 +31,30 @@ var genNewsHtml = function (dataObj) {
     }
     $('#news').html(html);
     //console.log(dataObj);
-    var count, imgurl, name, desc;
-    var html = '<h1 class="josefin"><b>Recent News</b></h1><p>Look what I found! Latest happenings in the world that relate to your text...</p>';
 
 
-    for (count = 0; count < dataObj.value.length; count++) {
-        try {
-            imgurl = dataObj.value[count].image.thumbnail.contentUrl;
-            name = dataObj.value[count].name;
-            desc = dataObj.value[count].description;
-            url = dataObj.value[count].url;
-            html = html +
-                '<div class="well">' +
-                    '<div class="row">' +
-                        '<div class="col-xs-3" ><img style="margin:10%" width="110%"  class="img-responsive img-circle" src="' + imgurl + '"/></div>' +
-                        '<div class="col-xs-9" style="text-overflow:ellipsis;"><div><h4 class=" josefin"><b><a href="' + url + '">' + name + '</a></b></h4></div><p class="muli">' + desc + '</p></div>' +
-                    '</div>' +
-                '</div>';
-        }
-        catch (err) {
-            ;
-        }
-    }
-    $('#news').html(html);
+    //var count, imgurl, name, desc;
+    //var html = '<h1 class="josefin"><b>Recent News</b></h1><p>Look what I found! Latest happenings in the world that relate to your text...</p>';
+
+
+    //for (count = 0; count < dataObj.value.length; count++) {
+    //    try {
+    //        imgurl = dataObj.value[count].image.thumbnail.contentUrl;
+    //        name = dataObj.value[count].name;
+    //        desc = dataObj.value[count].description;
+    //        url = dataObj.value[count].url;
+    //        html = html +
+    //            '<div class="well">' +
+    //                '<div class="row">' +
+    //                    '<div class="col-xs-3" ><img style="margin:10%" width="110%"  class="img-responsive img-circle" src="' + imgurl + '"/></div>' +
+    //                    '<div class="col-xs-9" style="text-overflow:ellipsis;"><div><h4 class=" josefin"><b><a href="' + url + '">' + name + '</a></b></h4></div><p class="muli">' + desc + '</p></div>' +
+    //                '</div>' +
+    //            '</div>';
+    //    }
+    //    catch (err) {
+    //        ;
+    //    }
+    //}
+    //$('#news').html(html);
 
 }

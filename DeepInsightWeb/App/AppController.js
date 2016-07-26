@@ -66,6 +66,8 @@ runAllJobs = function (topicsList, topicsWikiNamesList) {
     $('#web').html('');
     genWeb(topicsList);
 
+    genArticles(topicsList);
+
     $('#topics-list').html('<h3 class="josefin">Identifying the context of discussion...</h3>');
     genTopicsListCard(topicsList);
     
