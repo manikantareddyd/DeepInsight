@@ -41,8 +41,8 @@
 
 .imgWrap {
   position: relative;
-  height: 200px;
-  width: 257px;
+  height: 100%;
+  width: 100%;
 }
 
 .imgDescription {
@@ -51,6 +51,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  margin:4px;
   background: rgba(0,0,0, 0.5);
   color: #fff;
 
