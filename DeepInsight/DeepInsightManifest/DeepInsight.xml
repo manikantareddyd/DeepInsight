@@ -15,6 +15,12 @@
     <AppDomain>https://localhost:44300</AppDomain>
     <AppDomain>https://api.textrazor.com</AppDomain>
     <AppDomain>http://api.textrazor.com</AppDomain>
+    <AppDomain>https://api.meaningcloud.com</AppDomain>
+    <AppDomain>https://api.meaningcloud.com/topics-2.0</AppDomain>
+    <AppDomain>http://api.meaningcloud.com/topics-2.0</AppDomain>
+    <AppDomain>http://api.meaningcloud.com</AppDomain>
+    <AppDomain>http://api.meaningcloud.com/sentiment-2.1</AppDomain>
+    <AppDomain>https://api.meaningcloud.com/sentiment-2.1</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document" />

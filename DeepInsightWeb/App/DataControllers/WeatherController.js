@@ -6,7 +6,7 @@
 
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-            console.log(JSON.parse(this.response));
+            //console.log(JSON.parse(this.response));
             genWeatherHtml(JSON.parse(this.response));
         }
     });
@@ -41,9 +41,9 @@ genWeatherHtml = function (data) {
     var city = data.query.results.channel.location.city;
     var region = data.query.results.channel.location.region;
     var gif = data.query.results.channel.item.description
-    console.log(gif)
+    //console.log(gif)
     var link = gif.slice(9, 100).split('\n')
-    console.log(link[0].split('"')[1]);
+    //console.log(link[0].split('"')[1]);
     var cardHtml = link[0] +'<p><b>Location</b></p><p>We are somewhere in '+city+', '+region+'.<br>' + gif.slice(0, gif.length - 4);
     $('#weather-page').html(cardHtml);
     var whtml = '<img width="80px" style="padding-right:20px;padding-top:20px" src="' + link[0].split('"')[1] + '" />' +

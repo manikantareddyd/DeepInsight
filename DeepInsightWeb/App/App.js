@@ -17,6 +17,7 @@ var app = (function () {
 
         // After initialization, expose a common notification function
         app.showActionBox = function ( text) {
+            genSentiment(text);
             $('#action-box').slideDown('fast');
             //genImages();
             getLocation();
@@ -24,7 +25,6 @@ var app = (function () {
             populatePage(text);
             genDeepDive(text);
             
-            genSentiment(text);
             //genNews();
             //genWeb();
             //genTwitter();
