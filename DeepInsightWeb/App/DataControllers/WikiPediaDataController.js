@@ -2,6 +2,7 @@
     var count;
     for (count = 0; count < topicsList.length; count++) {
         $.ajax({
+            "async": true,
             type: "GET",
             "url": "https://en.wikipedia.org/w/api.php?format=json&indexpageids=true&action=query&prop=extracts&exintro=&explaintext=&titles=" + topicsWikiName[count],
             dataType: "jsonp",
