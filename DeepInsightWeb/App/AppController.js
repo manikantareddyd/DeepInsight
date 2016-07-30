@@ -14,7 +14,7 @@
             "text": text
         },
         "error": function (xhr, ajaxOptions, thrownError) {
-            console.log("Boom",thrownError);
+            console.log("Error in Text Razor Call",thrownError);
         },
         "success": function (data) {
             //console.log(data);
@@ -35,12 +35,12 @@
                     topicsWikiNamesList.push(wikiName)
                     //console.log(wikiName, topics[count]["label"])
                 }
-                console.log("Successfully retrived Topics");
+                console.log("Successfully retrived Topics from Text Razor");
 
                 runAllJobs(topicsList, topicsWikiNamesList);
             }
             catch (err) {
-                console.log(err);
+                console.log("Couldn't retrive Topics from Text Razor", err);
             };
         }
     });

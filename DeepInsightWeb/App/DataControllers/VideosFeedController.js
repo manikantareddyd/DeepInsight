@@ -17,7 +17,7 @@
     }
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
+        console.log("Received good response from Bing Videos");
         //var dataObj = JSON.parse(response.data);
         genVideosHtml(response);
     });

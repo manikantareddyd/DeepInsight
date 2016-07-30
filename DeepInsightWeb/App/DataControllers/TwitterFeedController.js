@@ -1,11 +1,11 @@
 ﻿var genTwitter = function (topicsList) {
     topicsList = topicsList.splice(0, 2);
     var text = topicsList.join(" OR ");
-    console.log("OK0",topicsList);
+    //console.log("OK0",topicsList);
     var data = JSON.stringify(false);
     //var text = "India OR Culture OR Asia OR Politics OR South Asia";
     text = text.replace("-", " OR ");
-    console.log("text",text);
+    //console.log("text",text);
     //text = encodeURI(text);
     //console.log(text);
     var g_TwitterConsumerKey = "iXtu2thYWgBW9Bl5YdhosiMm4";
@@ -37,7 +37,7 @@
     request = new XMLHttpRequest();
     request.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-            console.log(JSON.parse(this.response));
+            console.log("Received response from Twitter");
             genTwitterHtml(JSON.parse(this.response));
         }
     });
@@ -49,7 +49,6 @@
 }
 
 var genTwitterHtml = function (dataObj) {
-    console.log("hehe", dataObj);
     var count, statuses, status, source;
     var html = '<h1 class="josefin"><b>Twitter feed</b></h1><p>These tweets have been trending recently and I think they might be useful to you!</p>';
     statuses = dataObj.statuses;
@@ -58,14 +57,14 @@ var genTwitterHtml = function (dataObj) {
             var idstr = statuses[count].id_str;
         }
         catch (err) {
-            console.log("oopssss", err);
+            console.log("Twitter Error 1", err);
         }
         try{
             var usr = statuses[count].us
         
         }
         catch (err) {
-            console.log("pp", err);
+            console.log("Twitter Error 2", err);
         }
         try {
             text = statuses[count].text;

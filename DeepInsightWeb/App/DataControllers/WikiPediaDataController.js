@@ -7,7 +7,7 @@
             "url": "https://en.wikipedia.org/w/api.php?format=json&indexpageids=true&action=query&prop=extracts&exintro=&explaintext=&titles=" + topicsWikiName[count],
             dataType: "jsonp",
             error: function (xhr, ajaxOptions, thrownError) {
-                console.log("Boom in WikiPedia");
+                console.log("Error in WikiPedia retrieval",thrownError);
             },
             success: function (data) {
                 var items = [];

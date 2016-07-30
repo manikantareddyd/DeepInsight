@@ -18,7 +18,7 @@
     }
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
+        console.log("Received a good response from Bing Images");
         //var dataObj = JSON.parse(response.data);
         genImagesHtml(response);
     });

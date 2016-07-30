@@ -129,12 +129,3 @@ var genArticlesHtml = function (topicsList) {
 //    });
 //    cosole.log("LOL")
 //}
-
-var booback = function () {
-    var pop =  document.getElementsByName("liframe");
-    console.log(pop);
-    pop.history.back();
-}
-var boofwd = function () {
-    document.getElementByName('liframe').contentWindow.history.go(1);
-}

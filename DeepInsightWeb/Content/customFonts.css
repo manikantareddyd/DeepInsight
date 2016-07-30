@@ -1,21 +1,9 @@
-﻿@font-face {
-	font-family: 'Muli';
-	src: url('../../fonts/Muli.ttf');
-}
+﻿
 @font-face {
 	font-family: 'Josefin Sans';
 	src: url('../../fonts/JosefinSans.ttf');
 }
-@font-face{
-    font-family: 'MuliLight';
-    src: url('../../fonts/Muli-Light.ttf');
-}
-.muli {
-	font-family: 'Muli', sans-serif;
-}
+
 .josefin {
 	font-family: 'Josefin Sans', sans-serif;
 } 
-.muli-light{
-    font-family: 'MuliLight', sans-serif;
-}

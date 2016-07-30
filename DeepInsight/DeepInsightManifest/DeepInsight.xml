@@ -9,6 +9,7 @@
   <Description DefaultValue="DeepInsight"/>
   <IconUrl DefaultValue="~remoteAppUrl/Images/32x32.png" />
   <HighResolutionIconUrl DefaultValue="~remoteAppUrl/Images/64x64.png" />
+  <SupportUrl DefaultValue="~remoteAppUrl/App/Home/Home.html" />
   <AppDomains>
     <AppDomain>https://scholar.google.co.in</AppDomain>
     <AppDomain>https://en.wikipedia.org</AppDomain>

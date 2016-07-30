@@ -16,7 +16,7 @@
     }
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
+        console.log("Received response for Deeper Entities");
         $('#deeper_entity').html('');
         genDeeperEntities(response);
     });

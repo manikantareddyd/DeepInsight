@@ -17,7 +17,7 @@
     }
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
+        console.log("Received good response from Bing news");
         //var dataObj = JSON.parse(response.data);
         genNewsHtml(response);
     });
@@ -43,7 +43,7 @@ var genNewsHtml = function (dataObj) {
                 '<div class="well">' +
                     '<div class="row">' +
                         '<div class="col-xs-3" ><img style="margin:10%" width="110%"  class="img-responsive img-circle" src="' + imgurl + '"/></div>' +
-                        '<div class="col-xs-9" style="text-overflow:ellipsis;"><div><h4 class=" josefin"><b><a href="' + url + '">' + name + '</a></b></h4></div><p class="muli">' + desc + '</p></div>' +
+                        '<div class="col-xs-9" style="text-overflow:ellipsis;"><div><h4 class=" josefin"><b><a href="' + url + '">' + name + '</a></b></h4></div><p>' + desc + '</p></div>' +
                     '</div>' +
                 '</div>';
         }
@@ -69,7 +69,7 @@ var genNewsHtml = function (dataObj) {
     //            '<div class="well">' +
     //                '<div class="row">' +
     //                    '<div class="col-xs-3" ><img style="margin:10%" width="110%"  class="img-responsive img-circle" src="' + imgurl + '"/></div>' +
-    //                    '<div class="col-xs-9" style="text-overflow:ellipsis;"><div><h4 class=" josefin"><b><a href="' + url + '">' + name + '</a></b></h4></div><p class="muli">' + desc + '</p></div>' +
+    //                    '<div class="col-xs-9" style="text-overflow:ellipsis;"><div><h4 class=" josefin"><b><a href="' + url + '">' + name + '</a></b></h4></div><p>' + desc + '</p></div>' +
     //                '</div>' +
     //            '</div>';
     //    }

@@ -17,7 +17,7 @@
     }
 
     $.ajax(settings).done(function (response) {
-        console.log(response);
+        console.log("Received good from Bing Search");
         //var dataObj = JSON.parse(response.data);
         genWebHtml(response);
     });

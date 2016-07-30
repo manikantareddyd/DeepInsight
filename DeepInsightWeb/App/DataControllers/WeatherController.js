@@ -23,17 +23,16 @@
 }
 
 function getLocation() {
-    console.log("hhhh");
+    console.log("Trying to get Location");
     if (navigator.geolocation) {
-        console.log("prrr");
+        console.log("Found your location");
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-        console.log("oops");
+        console.log("Couldn't find your location");
     }
 }
 
 function showPosition(position) {
-    console.log(position,"oooo");
     genWeather(position);
 }
 
