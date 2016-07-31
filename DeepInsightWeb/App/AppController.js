@@ -49,20 +49,30 @@
 
 runAllJobs = function (topicsList, topicsWikiNamesList) {
 
+    $('#topics-list').html('<h3 class="josefin">Identifying the context of discussion...</h3>');
     genTopicsListCard(topicsList);
 
+    $('#wikipedia').html('<h1 class="josefin"><b>Wikipedia Excerpts</b></h1><p>I went through all of wikipedia to fetch articles, that might be relevant to you</p>');
     genWikipediaPage(topicsList, topicsWikiNamesList);
 
+    $('#images').html('');
     genImages(topicsList);
 
+    $('#videos').html('');
     genVideos(topicsList);
-    
+    //$('#articles').html('');
+
+    $('#news').html('');
     genNews(topicsList);
     
+    $('#twitter').html('');
     genTwitter(topicsList);
 
+    $('#web').html('');
     genWeb(topicsList);
 
     genArticles(topicsList);
 
+    
+    
 }

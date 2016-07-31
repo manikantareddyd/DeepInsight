@@ -1,5 +1,4 @@
 ﻿genWikipediaPage = function (topicsList, topicsWikiName) {
-
     var count;
     for (count = 0; count < topicsList.length; count++) {
         $.ajax({
@@ -11,7 +10,6 @@
                 console.log("Error in WikiPedia retrieval",thrownError);
             },
             success: function (data) {
-                $('#wikipedia').html('<h1 class="josefin"><b>Wikipedia Excerpts</b></h1><p>I went through all of wikipedia to fetch articles, that might be relevant to you</p>');
                 var items = [];
                 var pagesId = Object.keys(data.query.pages);
                 var extract;
