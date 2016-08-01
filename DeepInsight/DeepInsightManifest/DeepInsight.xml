@@ -31,6 +31,8 @@
     <AppDomain>https://query.yahooapis.com/v1/public/yql</AppDomain>
     <AppDomain>http://query.yahooapis.com/v1/public/yql</AppDomain>
     <AppDomain>http://query.yahooapis.com</AppDomain>
+    <AppDomain>http://deepinsight.azurewebsites.net/</AppDomain>
+    <AppDomain>https://deepinsight.azurewebsites.net/</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document" />

@@ -110,8 +110,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Properties\PublishProfiles\OfficeAppK - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\OfficeAppK - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\DeepInsight - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\DeepInsight - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
