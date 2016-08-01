@@ -96,6 +96,7 @@
     <Content Include="App\DataControllers\VideosFeedController.js" />
     <Content Include="App\DataControllers\WeatherController.js" />
     <Content Include="App\DataControllers\WebFeedController.js" />
+    <Content Include="App\Home\givelocationpermissions.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

@@ -24,15 +24,24 @@
 
 function getLocation() {
     console.log("Trying to get Location");
-    if (navigator.geolocation) {
-        console.log("Found your location");
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        console.log("Couldn't find your location");
-    }
+    setTimeout(function () {
+        var poohtml = "<h4>Please click on this <a href='https://deepinsight.azurewebsites.net/App/Home/givelocationpermissions.html' target='_blank'>link</a> to give DeepInsight permission to access your location.<br><br> Remember to set it to always Allow. <br><br> Once you've given the permissions please refresh the app!</h4>"
+        $('#weather-page').html(poohtml);
+        if (navigator.geolocation) {
+            console.log("Found your location");
+            
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            console.log("Couldn't find your location");
+
+        }
+    }, 1000);
+    
+    
 }
 
 function showPosition(position) {
+    $("#weather-page").html("<h4>Found You ...</h4>")
     genWeather(position);
 }
 
@@ -43,7 +52,7 @@ genWeatherHtml = function (data) {
     //console.log(gif)
     var link = gif.slice(9, 100).split('\n')
     //console.log(link[0].split('"')[1]);
-    var cardHtml = link[0] +'<p><b>Location</b></p><p>We are somewhere in '+city+', '+region+'.<br>' + gif.slice(0, gif.length - 4);
+    var cardHtml = link[0] +'<h4><b>Location</b></h4><h4>We are somewhere in '+city+', '+region+'.<br>' + gif.slice(0, gif.length - 4);
     $('#weather-page').html(cardHtml);
     var whtml = '<img width="80px" style="padding-right:20px;padding-top:20px" src="' + link[0].split('"')[1] + '" />' +
                 '<p>Mostly Cloudy</p>';
